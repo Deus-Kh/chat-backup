@@ -1,0 +1,191 @@
+{
+    "dialogs":[
+        {
+            "_id":"22d6a669fc9f22ea7cd6c51986131ed2",
+            "user":{
+                "_id":"22d6a669fc9f22ea7cd6c51986131ed2",
+                "username": "Bob2005",
+                "avatar":"./avatar2.jpg",
+                "isOnline":false
+            },
+            "lastMessage":{
+                "user":{
+                    "_id":"22d6a669fc9f22ea7cd6c51986131ed2",
+                    "username": "Bob2005",
+                    "avatar":"./avatar2.jpg"
+                },
+                "text":"Hello my dear friend",
+                "isReaded":false,
+                "created_at":"Tue Dec 17 2024 19:21:07"
+            }
+        }, 
+        {
+            "_id": "52d6a669fc9f22ea7cd6c51986131ed0",
+            "user":{
+                "_id": "52d6a669fc9f22ea7cd6c51986131ed0",
+                "username": "John Smith",
+                "avatar":"avatar1.jpg",
+                "isOnline":true
+            },
+            "lastMessage":{
+                "user":{
+                    "_id":"52d6a669fc9f22ea7cd6c51986131ed0",
+                    "username": "John Smith",
+                    "avatar":"avatar1.jpg"
+                },
+                "text":"Good bie, my friend",
+                "isReaded":true,
+                "created_at":"Tue Mar 13 2024 23:21:07"
+            }
+        },
+        {
+            "_id": "zxc6a669fc9f22ea7cd6c51986131ed0",
+            "user":{
+                "_id": "zxc6a669fc9f22ea7cd6c51986131ed0",
+                "username": "Abo Smith",
+                "avatar":"avatar1.jpg",
+                "isOnline":true
+            },
+            "lastMessage":{
+                "user":{
+                    "_id":"zxc6a669fc9f22ea7cd6c51986131ed0",
+                    "username": "Abo Smith",
+                    "avatar":"avatar1.jpg"
+                },
+                "text":"Good bie, my friend",
+                "isReaded":true,
+                "created_at":"Tue Mar 13 2024 23:21:07"
+            }
+        },
+        {
+            "_id": "vbn6a669fc9f22ea7cd6c51986131ed0",
+            "user":{
+                "_id": "vbn6a669fc9f22ea7cd6c51986131ed0",
+                "username": "Hamo Smith",
+                "avatar":"avatar1.jpg",
+                "isOnline":true
+            },
+            "lastMessage":{
+                "user":{
+                    "_id":"vbn6a669fc9f22ea7cd6c51986131ed0",
+                    "username": "Hamo Smith",
+                    "avatar":"avatar1.jpg"
+                },
+                "text":"Good bie, my friend",
+                "isReaded":true,
+                "created_at":"Tue Mar 13 2024 23:21:07"
+            }
+        }
+        
+    ],
+    "messages":[
+        {
+          "_id": "22d6a669fc9f22ea7cd6c51986131ed2",
+          "avatar": null,
+          "text": "consequat dolore sunt est qui laborum sint anim velit commodo aliqua id aliquip laborum occaecat proident fugiat nostrud ut sit pariatur sint enim consequat eiusmod cupidatat do do non aute",
+          "date": "2001-01-25T14:42:48.424Z",
+          "user": {
+            "_id": "16771612371311ebac2c0cb83",
+            "username": "Stacy Sears",
+            "avatar": null
+          },
+            "dialog":"22d6a669fc9f22ea7cd6c51986131ed2"
+        },
+        {
+          "_id": "3677161230df90bbfd9f49de8",
+          "avatar": null,
+          "text": "pariatur eu aute exercitation cupidatat voluptate exercitation eiusmod proident qui dolore ut adipisicing commodo anim proident ut aliqua ea culpa eu deserunt voluptate excepteur voluptate sunt deserunt elit do id",
+          "date": "2002-07-06T08:44:35.867Z",
+          "user": {
+            "_id": "1677161233dc3e02e76bf8ba7",
+            "username": "Laverne Bailey",
+            "avatar": null
+          },
+            "dialog":"22d6a669fc9f22ea7cd6c51986131ed2"
+        },
+        {
+          "_id": "267716123ad0ef6962023cb96",
+          "avatar": null,
+          "text": "do elit do sint consequat est dolor labore tempor non quis deserunt in esse anim non aliquip in nostrud minim occaecat occaecat eu laboris ullamco pariatur dolore ullamco sit amet",
+          "date": "2009-10-12T05:11:53.729Z",
+          "user": {
+            "_id": "2677161232b8b0c502906c267",
+            "username": "Naomi Henderson",
+            "avatar": null
+          }, 
+            "dialog":"22d6a669fc9f22ea7cd6c51986131ed2"
+        },
+        {
+          "_id": "267716123ec339d81936d855a",
+          "avatar": null,
+          "text": "qui sint do reprehenderit eiusmod laboris adipisicing est elit magna velit dolor nulla fugiat amet anim do ea laboris commodo consequat dolor excepteur esse sit voluptate veniam minim laborum sint",
+          "date": "2001-01-24T16:20:35.306Z",
+          "user": {
+            "_id": "167716123ec88fb965a0d5ff7",
+            "username": "Rowe Williamson",
+            "avatar": null
+          }, 
+            "dialog":"22d6a669fc9f22ea7cd6c51986131ed2"
+        },
+        {
+          "_id": "36771612367df8736a1f06032",
+          "avatar": null,
+          "text": "id adipisicing sunt eiusmod ea velit consequat velit enim ut proident commodo dolore adipisicing dolor qui aliqua nostrud laborum pariatur et dolore in commodo tempor cillum enim minim sunt pariatur",
+          "date": "2004-07-03T03:28:09.153Z",
+          "user": {
+            "_id": "1677161237f747213813665dc",
+            "username": "Wiggins Simmons",
+            "avatar": null
+          }, 
+            "dialog":"22d6a669fc9f22ea7cd6c51986131ed2"
+        },
+        {
+          "_id": "1677161236aa04ed640249f3f",
+          "avatar": null,
+          "text": "consequat et pariatur aliqua amet tempor fugiat pariatur ea incididunt dolor qui voluptate proident labore reprehenderit irure elit cillum sit velit occaecat eu incididunt ullamco fugiat excepteur cillum dolore dolor",
+          "date": "2023-08-21T14:03:07.439Z",
+          "user": {
+            "_id": "1677161236c15c3c937bde6b8",
+            "username": "Lola Palmer",
+            "avatar": null
+          }, 
+            "dialog":"22d6a669fc9f22ea7cd6c51986131ed2"
+        },
+        {
+          "_id": "1677161235fa525f7527e6412",
+          "avatar": null,
+          "text": "fugiat aliqua aliqua fugiat anim id occaecat id quis elit est aute culpa tempor laborum enim culpa et aute mollit cupidatat velit consectetur amet qui magna ex id nostrud elit",
+          "date": "2004-06-08T09:19:30.403Z",
+          "user": {
+            "_id": "26771612304b1b6df62a1ea45",
+            "username": "Gabrielle Webster",
+            "avatar": null
+          }, 
+            "dialog":"22d6a669fc9f22ea7cd6c51986131ed2"
+        },
+        {
+          "_id": "367716123f8f1a64f2c55434e",
+          "avatar": null,
+          "text": "officia irure proident adipisicing eu voluptate magna fugiat tempor officia tempor sunt occaecat ea exercitation amet laborum irure minim Lorem non quis laborum exercitation aliquip tempor culpa adipisicing ad culpa",
+          "date": "2015-08-18T23:27:31.542Z",
+          "user": {
+            "_id": "167716123305b334483fe4605",
+            "username": "Lourdes Dominguez",
+            "avatar": null
+          }, 
+            "dialog":"22d6a669fc9f22ea7cd6c51986131ed2"
+        },
+        {
+          "_id": "267716123bff199d4bc180cd3",
+          "avatar": null,
+          "text": "cupidatat commodo aute aute sit ipsum aliqua elit ea ullamco ex dolore aliqua veniam consectetur pariatur est et do velit ipsum culpa sit nostrud laboris quis exercitation sunt aliqua aliquip",
+          "date": "2001-11-12T14:08:47.912Z",
+          "user": {
+            "_id": "267716123e261fee5cc4de77c",
+            "username": "Nanette Richmond",
+            "avatar": "./avatar2.jpg"
+          }, 
+            "dialog":"22d6a669fc9f22ea7cd6c51986131ed2"
+        }
+      ]
+}

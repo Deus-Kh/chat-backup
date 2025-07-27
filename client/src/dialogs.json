@@ -1,0 +1,79 @@
+[
+    {
+        "_id":"22d6a669fc9f22ea7cd6c51986131ed2",
+        "user":{
+            "_id":"22d6a669fc9f22ea7cd6c51986131ed2",
+            "username": "Bob2005",
+            "avatar":"./avatar2.jpg",
+            "isOnline":false
+        },
+        "lastMessage":{
+            "user":{
+                "_id":"22d6a669fc9f22ea7cd6c51986131ed2",
+                "username": "Bob2005",
+                "avatar":"./avatar2.jpg"
+            },
+            "text":"Hello my dear friend",
+            "isReaded":false,
+            "created_at":"Tue Dec 17 2024 19:21:07"
+        }
+    }, 
+    {
+        "_id": "52d6a669fc9f22ea7cd6c51986131ed0",
+        "user":{
+            "_id": "52d6a669fc9f22ea7cd6c51986131ed0",
+            "username": "John Smith",
+            "avatar":"avatar1.jpg",
+            "isOnline":true
+        },
+        "lastMessage":{
+            "user":{
+                "_id":"52d6a669fc9f22ea7cd6c51986131ed0",
+                "username": "John Smith",
+                "avatar":"avatar1.jpg"
+            },
+            "text":"Good bie, my friend",
+            "isReaded":true,
+            "created_at":"Tue Mar 13 2024 23:21:07"
+        }
+    },
+    {
+        "_id": "zxc6a669fc9f22ea7cd6c51986131ed0",
+        "user":{
+            "_id": "zxc6a669fc9f22ea7cd6c51986131ed0",
+            "username": "Abo Smith",
+            "avatar":"avatar1.jpg",
+            "isOnline":true
+        },
+        "lastMessage":{
+            "user":{
+                "_id":"zxc6a669fc9f22ea7cd6c51986131ed0",
+                "username": "Abo Smith",
+                "avatar":"avatar1.jpg"
+            },
+            "text":"Good bie, my friend",
+            "isReaded":true,
+            "created_at":"Tue Mar 13 2024 23:21:07"
+        }
+    },
+    {
+        "_id": "vbn6a669fc9f22ea7cd6c51986131ed0",
+        "user":{
+            "_id": "vbn6a669fc9f22ea7cd6c51986131ed0",
+            "username": "Hamo Smith",
+            "avatar":"avatar1.jpg",
+            "isOnline":true
+        },
+        "lastMessage":{
+            "user":{
+                "_id":"vbn6a669fc9f22ea7cd6c51986131ed0",
+                "username": "Hamo Smith",
+                "avatar":"avatar1.jpg"
+            },
+            "text":"Good bie, my friend",
+            "isReaded":true,
+            "created_at":"Tue Mar 13 2024 23:21:07"
+        }
+    }
+    
+]

@@ -1,0 +1,5 @@
+i skiped messages scroll(with ref) part in video at 30 may 2019 in 2:05:00
+
+i should delete tinycolor - completed
+
+i should add file upload button

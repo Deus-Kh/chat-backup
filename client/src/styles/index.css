@@ -1,0 +1,38 @@
+@import url('./Layouts/chats.css');
+
+
+html, 
+body,
+#root,
+.App{
+    font-size: 14px;
+    height: 100%;
+    color: #202020;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body{
+    background-color: #f4f7fd;
+}
+
+.my-button{
+    border: none;
+    padding: 0;
+    height: auto;
+    width: auto;
+    & .anticon{
+        transition: all ease-in-out .15s;
+        opacity: .5;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 1;
+        }}
+    &:hover{
+        color: #202020 !important;
+    }
+}

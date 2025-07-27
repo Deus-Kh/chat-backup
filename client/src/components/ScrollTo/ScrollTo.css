@@ -1,0 +1,9 @@
+.ScrollTo{
+    z-index: 999;
+    display: block;
+    position: sticky;
+    justify-self: end;
+    bottom: 30px;
+    
+    right: 15px;
+}

@@ -1,0 +1,45 @@
+.auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    & .auth__top{
+        text-align: center;
+        margin-bottom: 10px;
+        h2{
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        p{
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: .1px;
+            opacity: .5;
+        }
+    }
+    .block{
+        max-width: 430px;
+        /* width: 430px; */
+    }
+    .success-block{
+        /* height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; */
+        text-align: center;
+    }
+}
+ .login-form {
+    max-width: 300px;
+  }
+ .login-form-forgot {
+    float: right;
+  }
+ .ant-col-rtl .login-form-forgot {
+    float: left;
+  }
+.login-form-button {
+    width: 100%;
+  }

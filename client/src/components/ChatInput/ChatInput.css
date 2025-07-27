@@ -1,0 +1,32 @@
+.chat-input{
+    position: relative;
+    &>span{
+            border: 1px solid #d9d9d9 !important;
+            box-shadow: none !important;
+            
+    }
+    display: flex;
+
+
+    & span{
+        background: white;
+        
+    }
+
+    & .anticon{
+        transition: all .1s;
+        opacity: .5;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+    
+    
+    & .chat-input-actions{
+        display: flex;
+        gap:10px
+    }
+}

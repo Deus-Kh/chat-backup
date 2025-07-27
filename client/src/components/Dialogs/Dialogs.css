@@ -1,0 +1,94 @@
+.dialogs-item{
+    min-width: 240px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 1rem;
+    .message-checkedIcon{
+        display: inline-block;
+        margin: 0;
+        margin-right: 3px;
+        & img{
+            height: .7rem;
+        }
+    }
+    
+    & .dialogs-item-avatar{
+        flex-basis: 40px;
+        flex-shrink: 0;
+        /* margin-right: 10px; */
+        /* height: 40px;
+        width: 40px; */
+      & > img{
+        height: auto;
+        width: 100%;
+        border-radius: 50%;
+
+      }  
+    }
+    & >.dialogs-item-content{
+        display: flex;
+        flex-direction: column;
+        /* line-height: 1.6rem; */
+        gap: 5px;
+        padding: .2rem .5rem;
+        width: 100%;
+        & >:nth-child(n){
+            display: flex;
+            justify-content: space-between;
+        }
+        & >.dialogs-item-top{
+            & b{
+                font-weight: 600;
+            }
+            & span{
+                color: #20202088;
+                /* opacity: .5; */
+            }
+        }
+        & >.dialogs-item-bottom{
+            
+            & p{
+                opacity: .5;
+                font-size: .95rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                width:91.5%;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                
+            }
+            & >.count{
+                font-size: .95rem;
+                position: relative;
+                right: 0;
+                text-align: center;
+                background: #f46868;
+                color: #fff;
+                border-radius: 30px;
+                font-weight: 500;
+                /* width: 20px; */
+                padding: 0 6.25px;
+                height: 20px;
+            }
+            
+        }
+    }
+}
+.isOnline{
+    & >.dialogs-item-avatar{
+        position: relative;
+        &::before{
+            display: block;
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            content: '';
+            background-color: var(--onlineDot);
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+        }
+    }
+}
