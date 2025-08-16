@@ -1,5 +1,14 @@
 import mongoose, {Schema} from 'mongoose'
 
+import { IMessage } from "./Messages";
+import { IUser } from "./Users";
+
+export interface IDialog extends Document {
+  partner: IUser | string;
+  author: IUser | string;
+  messages: IMessage[];
+  lastMessage: IMessage | string;
+}
 
 const DialogsSchema = new Schema({
     author: {

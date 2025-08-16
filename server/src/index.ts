@@ -1,41 +1,33 @@
-import express from 'express';
-import mongoose from "mongoose";
-import bodyParser from 'body-parser'
-// import dotenv from 'dotenv';
-import {UserModel} from './schemas'
-import {UserController, DialogController, MessageController} from './controllers'
-import { updateLastSeen,checkAuth } from './middlewares';
+import http from "http";
+import express from "express";
+import bodyParser from "body-parser";
+import dotenv from 'dotenv';
+import cors from 'cors'
 
-mongoose.connect('mongodb://127.0.0.1:27017/chat')
+import { connectDB } from "./core/db";
+import initSocket from "./core/socket";
+import createRoutes from "./routes";
+import { checkAuth, updateLastSeen } from "./middlewares";
 
-const app = express();
-require('dotenv').config()
-app.use(bodyParser.json());
+dotenv.config();
 
-const User = new UserController();
-const Dialog = new DialogController() 
-const Message = new MessageController() 
+const SERVER_PORT = process.env.SERVER_PORT || 9999;
 
-app.use(checkAuth)
-app.use(updateLastSeen)
-app.get('/user/:id', User.index)
-app.delete('/user/:id', User.delete)
-app.post('/user/registration', User.create)
-app.post('/user/login', User.login)
+const startServer = async () => {
+  await connectDB(); // Подключаем MongoDB
+  const app = express();
+  const server = http.createServer(app);
+  const io = initSocket(server);
+  app.use(cors({origin:'http://localhost:3000', credentials: true}))
+  app.use(bodyParser.json());
+  app.use(checkAuth);
+  app.use(updateLastSeen);
 
-app.get('/dialogs/:id', Dialog.index)
-app.post('/dialogs/create', Dialog.create)
-app.delete('/dialogs/:id', Dialog.delete)
+  createRoutes(app, io);
 
-app.get('/dialog/:dialogId/messages', Message.index)
-app.post('/messages/', Message.create)
-app.delete('/messages/:id', Message.delete)
+  server.listen(SERVER_PORT, () => {
+    console.log(`Server running on http://localhost:${SERVER_PORT}`);
+  });
+};
 
-
-app.get('/', (req, res)=>{
-    res.send('hello')
-})
-app.listen(process.env.SERVER_PORT, ()=>{
-    console.log(`App listen http://localhost:${process.env.SERVER_PORT} port`);
-    
-})  
+startServer();

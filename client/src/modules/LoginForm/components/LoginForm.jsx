@@ -34,21 +34,21 @@ function LoginForm(props) {
         onFinish={handleSubmit} 
       >
         <Form.Item
-        validateStatus={ValidateField('username',touched,errors)}
+        validateStatus={ValidateField('email',touched,errors)}
         hasFeedback
-        help={!touched.username ? '': errors.username}
-          name="username"
+        help={!touched.email ? '': errors.email}
+          name="email"
           rules={[
             {
               required: true,
-              message: 'Please input your Username!',
+              message: 'Please input your Email!',
             },
           ]}
         >
           <Input
-            id='username'
+            id='email'
            prefix={<UserOutlined className="site-form-item-icon" />} 
-           placeholder="Username" 
+           placeholder="Email" 
            onChange={handleChange}
           onBlur={handleBlur}
           // defaultValue={values.username}
@@ -86,7 +86,7 @@ function LoginForm(props) {
         </Form.Item> */}
   
         <Form.Item>
-          <Button type="primary" htmlType="submit" className="login-form-button">
+          <Button type="primary" htmlType="submit" disabled={isSubmitting}  className="login-form-button">
             Log in
           </Button>
           

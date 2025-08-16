@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter ,Routes,Route} from 'react-router-dom'
 import App from './App';
 import { Provider } from "react-redux";
+import '@ant-design/v5-patch-for-react-19';
+
 // import reportWebVitals from './reportWebVitals';
 
 import store from './redux/store'

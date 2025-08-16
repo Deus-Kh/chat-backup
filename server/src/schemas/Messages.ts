@@ -1,5 +1,12 @@
 import mongoose, {Schema} from 'mongoose'
 
+import { IDialog } from "./Dialogs";
+
+export interface IMessage extends Document {
+  text: string;
+  dialog: IDialog | string;
+  read: boolean;
+}
 
 const MessageSchema = new Schema({
     text: {
