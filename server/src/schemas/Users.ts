@@ -35,7 +35,7 @@ const UserSchema = new Schema({
     confirmedHash:String,
     lastSeen:{
         type:Date,
-        default:Date.now
+        default:Date.now()
     }
 
 },{

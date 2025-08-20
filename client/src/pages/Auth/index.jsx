@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route ,Outlet} from 'react-router-dom'
 // import {Button as MyButton, Block} from '../../components';
 import {LoginForm,RegisterForm} from '../../modules';
 import './Auth.css'
@@ -11,14 +11,14 @@ function Auth() {
         {/* <div className="auth_content"> */}
         
         {/* <BrowserRouter> */}
-        
-         <Routes>
+        <Outlet/>
+         {/* <Routes>
          
-        <Route exact path='/' element={<LoginForm/>}/>
-        <Route exact path='/login' element={<LoginForm/>}/>
-        <Route exact path='/register' element={<RegisterForm/>}/>
         
-        </Routes>
+        <Route exact path='/signin' element={<LoginForm/>}/>
+        <Route exact path='/signup' element={<RegisterForm/>}/>
+        
+        </Routes> */}
         {/*  </BrowserRouter> */}
         
         

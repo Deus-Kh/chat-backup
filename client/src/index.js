@@ -8,11 +8,12 @@ import '@ant-design/v5-patch-for-react-19';
 // import reportWebVitals from './reportWebVitals';
 
 import store from './redux/store'
+import { userActions } from "./redux/actions";
 
 import './index.css';
 import './styles/_variables.css'
 import './styles/index.css';
-
+store.dispatch(userActions.fetchUserData());
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

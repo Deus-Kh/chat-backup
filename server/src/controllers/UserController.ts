@@ -27,14 +27,20 @@ class UserController {
   }
     else{
       const id = req.user._id;
-    UserModel.findById(id, (err: any, user: IUser) => {
-      if (err || !user) {
+      UserModel.findById(id).then((user) => {if (!user) {
         return res.status(404).json({
           message: "User not found",
         });
       }
-      res.json(user);
-    });
+      res.json(user);})
+    // UserModel.findById(id, (err: any, user: IUser) => {
+    //   if (err || !user) {
+    //     return res.status(404).json({
+    //       message: "User not found",
+    //     });
+    //   }
+    //   res.json(user);
+    // });
     }
   };
   create(req: express.Request, res: express.Response) {
@@ -66,7 +72,8 @@ class UserController {
       email: req.body.email,
       password: req.body.password,
     };
-
+    console.log("Login", postData);
+    
     const errors: Result<ValidationError> = validationResult(req);
 
     if (!errors.isEmpty()) {

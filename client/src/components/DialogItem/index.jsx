@@ -26,7 +26,8 @@ function DialogItem({_id, user,message,unreaded,isMe, onSelect,currentDialogId})
     
     return (
          <div 
-            className={`dialogs-item ${user.isOnline?`isOnline`:''} ${currentDialogId==_id?`current-dialog`: ''}`}
+            // className={`dialogs-item ${user.isOnline?`isOnline`:''} ${currentDialogId==_id?`current-dialog`: ''}`}
+            className={`dialogs-item  ${currentDialogId===_id?`current-dialog`: ''}`}
             onClick={onSelect.bind(this, _id)}
             >
             <div className="dialogs-item-avatar">

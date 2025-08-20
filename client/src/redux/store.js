@@ -10,6 +10,6 @@ const composeEnhancers =
 
 const middleware = [thunk];
 
-const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(...middleware)))
 
 export default store

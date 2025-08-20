@@ -1,5 +1,6 @@
 const initialState ={
-    data:null
+    data:null,
+    token:window.localStorage.getItem('token')
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -9,8 +10,15 @@ export default (state = initialState,{type, payload}) =>{
         case 'USER:SET_DATA':
         return {
             ...state,
-            data:payload
+        data: payload,
+        isAuth: true,
+        token: window.localStorage.token
         };
+        case "USER:SET_IS_AUTH":
+      return {
+        ...state,
+        isAuth: payload
+      };
         
         default:
             return state;

@@ -11,15 +11,35 @@ export interface IDialog extends Document {
 }
 
 const DialogsSchema = new Schema({
+    type: {
+      type: String,
+      enum: ["private", "group"],
+      default: "private",
+    },
+    title: {
+      type: String,
+    },
+
+    // аватар группы
+    avatar: {
+      type: String,
+    },
     author: {
         type: Schema.Types.ObjectId,
         ref:'User',
         required:true
     },
-    partner: {
-        type: Schema.Types.ObjectId, 
-        ref:'User',
-        required:true},
+    members: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true,
+      },
+    ],
+    // partner: {
+    //     type: Schema.Types.ObjectId, 
+    //     ref:'User',
+    //     required:true},
     lastMessage:{
         type: Schema.Types.ObjectId, 
         ref:'Message'
