@@ -67,12 +67,15 @@ const LoginForm=(props)=>{
 
         // const data = await axios.post('/user/signin', values);
         // console.log("Login Res:", data.data);
-        store.dispatch(userActions.fetchUserSignIn(values)).then(data=>{
+        const data =await store.dispatch( userActions.fetchUserSignIn(values))
+        // .then(data=>{
+        console.log("DATA:",data);
+        
         if (data.status==='success') {
                 navigate('/')
                 
             }
-        })
+        // })
         
         setSubmitting(false)
         console.log("test",values);

@@ -6,15 +6,16 @@ const actions = {
         type:'USER:SET_DATA',
         payload:data,
     }),
-    setIsAuth: bool => ({
+    setIsAuth: bool => (  {
     type: 'USER:SET_IS_AUTH',
     payload: bool,
   }),
-  fetchUserData: () => dispatch => {
+  fetchUserData: () => async dispatch => {
     userApi
       .getMe()
       .then(({ data }) => {
         dispatch(actions.setUserData(data));
+        dispatch(actions.setIsAuth(true));
       })
       .catch(err => {
         if (err.response.status === 403) {
@@ -28,8 +29,12 @@ const actions = {
             const { data } = await userApi.signIn(postData);
             axios.defaults.headers.common.Authorization=`Bearer ${data.token}`;
             window.localStorage.setItem('token',data.token)
-            dispatch(actions.fetchUserData());
-            dispatch(actions.setIsAuth(true));
+             await dispatch(actions.fetchUserData())
+            // .then(()=>{
+              
+            // })
+            
+            
         return data
         } catch (error) {
             console.error(error)

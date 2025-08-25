@@ -1,6 +1,7 @@
 const initialState ={
     data:null,
-    token:window.localStorage.getItem('token')
+    token:window.localStorage.getItem('token'),
+    isAuth:!!window.localStorage.getItem('token')
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
