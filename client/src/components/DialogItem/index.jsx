@@ -21,7 +21,7 @@ const getMessageTime = created_at=>{
 }
 
 function DialogItem({_id, user,message,unreaded,isMe, onSelect,currentDialogId}) {
-    // console.log(_id);
+    console.log("Dialog Item log", user);
     
     
     return (

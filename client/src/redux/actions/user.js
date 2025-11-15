@@ -10,23 +10,28 @@ const actions = {
     type: 'USER:SET_IS_AUTH',
     payload: bool,
   }),
-  fetchUserData: () => async dispatch => {
-    userApi
-      .getMe()
-      .then(({ data }) => {
-        dispatch(actions.setUserData(data));
-        dispatch(actions.setIsAuth(true));
-      })
-      .catch(err => {
-        if (err.response.status === 403) {
-          dispatch(actions.setIsAuth(false));
-          delete window.localStorage.token;
-        }
-      });
-  },
+  fetchUserData: () => async (dispatch) => {
+  try {
+    const { data } = await userApi.getMe();
+    console.log("Get Me", data);
+
+    dispatch(actions.setUserData(data));
+    dispatch(actions.setIsAuth(true));
+  } catch (err) {
+    if (err.response?.status === 403) {
+      dispatch(actions.setIsAuth(false));
+      delete window.localStorage.token;
+    } else {
+      console.error("Error fetching user data:", err);
+    }
+  }
+} 
+,
     fetchUserSignIn: (postData)=> async dispatch =>{
         try {
             const { data } = await userApi.signIn(postData);
+            console.log("ACt", data);
+            
             axios.defaults.headers.common.Authorization=`Bearer ${data.token}`;
             window.localStorage.setItem('token',data.token)
              await dispatch(actions.fetchUserData())

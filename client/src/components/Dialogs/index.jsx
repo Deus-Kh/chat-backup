@@ -8,6 +8,8 @@ import DialogItem from "../DialogItem";
 
 
 function Dialogs({items,userId, onSearch, inputValue, onSelectDialog, currentDialogId}) {
+  console.log("Dialogs log", items);
+  
     return (
       <>
       <div className="chat-sidebar-search">

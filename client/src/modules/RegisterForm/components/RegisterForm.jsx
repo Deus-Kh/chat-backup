@@ -35,7 +35,7 @@ function RegisterForm(props) {
         onFinish={handleSubmit} 
       >
         <Form.Item
-        validateStatus={ValidateField('username',touched,errors)}
+        // validateStatus={ValidateField('username',touched,errors)}
         hasFeedback
         help={!touched.username ? '': errors.username}
           name="username"
@@ -52,7 +52,7 @@ function RegisterForm(props) {
 
 
         <Form.Item
-        validateStatus={ValidateField('email',touched,errors)}
+        // validateStatus={ValidateField('email',touched,errors)}
         hasFeedback
         help={!touched.email ? '': errors.email}
           name="email"
@@ -74,7 +74,7 @@ function RegisterForm(props) {
 
 
         <Form.Item
-          validateStatus={ValidateField('password',touched,errors)}
+          // validateStatus={ValidateField('password',touched,errors)}
           hasFeedback
           help={!touched.password ? '': errors.password}
           name="password"
@@ -97,7 +97,7 @@ function RegisterForm(props) {
 
 
         <Form.Item
-        validateStatus={ValidateField('repeatPassword',touched,errors)}
+        // validateStatus={ValidateField('repeatPassword',touched,errors)}
         hasFeedback
         help={!touched.repeatPassword ? '': errors.repeatPassword }
           name="repeatPassword"
@@ -134,7 +134,7 @@ function RegisterForm(props) {
           
         </Form.Item>
         <Form.Item>
-        Or <Link to="/login">login</Link>
+        Or <Link to="/signin">login</Link>
         </Form.Item>
       </Form> </>
       

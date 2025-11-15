@@ -59,7 +59,7 @@ const LoginForm=(props)=>{
     validate: values =>{
         let errors = {};
         Validation({isAuth:true,values,errors})
-        console.log(errors);
+        // console.log(errors);
         return errors;
     },
 
@@ -67,7 +67,7 @@ const LoginForm=(props)=>{
 
         // const data = await axios.post('/user/signin', values);
         // console.log("Login Res:", data.data);
-        const data =await store.dispatch( userActions.fetchUserSignIn(values))
+        const data = await store.dispatch( userActions.fetchUserSignIn(values))
         // .then(data=>{
         console.log("DATA:",data);
         

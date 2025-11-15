@@ -92,7 +92,7 @@ function LoginForm(props) {
           
         </Form.Item>
         <Form.Item>
-        Or <Link to="/register">register now!</Link>
+        Or <Link to="/signup">register now!</Link>
         </Form.Item>
       </Form> 
       </Block>
